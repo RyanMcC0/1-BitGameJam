@@ -50,28 +50,61 @@ rotation = 1.5708
 texture = ExtResource("2_14oow")
 
 [node name="Door2" type="Sprite2D" parent="Shipmap"]
-position = Vector2(-224, -32)
-rotation = 1.5708
+position = Vector2(-96, -96)
 texture = ExtResource("2_14oow")
 
 [node name="Door3" type="Sprite2D" parent="Shipmap"]
-position = Vector2(-224, -32)
-rotation = 1.5708
+position = Vector2(160, -96)
 texture = ExtResource("2_14oow")
 
 [node name="Door4" type="Sprite2D" parent="Shipmap"]
-position = Vector2(-224, -32)
-rotation = 1.5708
+position = Vector2(-96, 32)
+rotation = 3.14159
 texture = ExtResource("2_14oow")
 
 [node name="Door5" type="Sprite2D" parent="Shipmap"]
-position = Vector2(-224, -32)
-rotation = 1.5708
+position = Vector2(160, 32)
+rotation = 3.14159
 texture = ExtResource("2_14oow")
 
 [node name="Door6" type="Sprite2D" parent="Shipmap"]
-position = Vector2(-224, -32)
+position = Vector2(544, -96)
 rotation = 1.5708
+texture = ExtResource("2_14oow")
+
+[node name="Door7" type="Sprite2D" parent="Shipmap"]
+position = Vector2(416, -224)
+rotation = -3.14159
+texture = ExtResource("2_14oow")
+
+[node name="Door8" type="Sprite2D" parent="Shipmap"]
+position = Vector2(288, -352)
+rotation = -1.57079
+texture = ExtResource("2_14oow")
+
+[node name="Door9" type="Sprite2D" parent="Shipmap"]
+position = Vector2(32, -288)
+rotation = -1.57079
+texture = ExtResource("2_14oow")
+
+[node name="Door10" type="Sprite2D" parent="Shipmap"]
+position = Vector2(416, 160)
+rotation = -3.14159
+texture = ExtResource("2_14oow")
+
+[node name="Door11" type="Sprite2D" parent="Shipmap"]
+position = Vector2(32, 224)
+rotation = -1.57079
+texture = ExtResource("2_14oow")
+
+[node name="Door12" type="Sprite2D" parent="Shipmap"]
+position = Vector2(288, 288)
+rotation = -1.57079
+texture = ExtResource("2_14oow")
+
+[node name="Door13" type="Sprite2D" parent="Shipmap"]
+position = Vector2(544, 32)
+rotation = -1.57079
 texture = ExtResource("2_14oow")
 
 [node name="Camera2D" type="Camera2D" parent="."]
