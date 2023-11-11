@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3lg0jj0wxk70"]
+
+[ext_resource type="Texture2D" uid="uid://c2lmoyig6g78r" path="res://shipmap.svg" id="1_7wink"]
+[ext_resource type="Texture2D" uid="uid://cm3aoi6x83lb8" path="res://ship.svg" id="1_e23eh"]
+[ext_resource type="Texture2D" uid="uid://cx474170qejh7" path="res://blackbackground.png" id="1_qxk7w"]
+[ext_resource type="Texture2D" uid="uid://cp7hp55m2g32o" path="res://DoorOpen.svg" id="2_14oow"]
+[ext_resource type="Script" path="res://ShipAnimation.gd" id="3_7uibv"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ap0q6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+material = SubResource("CanvasItemMaterial_ap0q6")
+position = Vector2(-757, 173)
+scale = Vector2(4.448, 4.448)
+
+[node name="Blackbackground" type="Sprite2D" parent="Background"]
+position = Vector2(184.577, -39.7932)
+scale = Vector2(594.424, 363.309)
+texture = ExtResource("1_qxk7w")
+
+[node name="Star Emitter" type="CPUParticles2D" parent="Background"]
+position = Vector2(484.937, -43.8399)
+amount = 200
+lifetime = 20.0
+speed_scale = 0.78
+emission_shape = 3
+emission_rect_extents = Vector2(1, 200)
+direction = Vector2(-1, 0)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 341.46
+initial_velocity_max = 341.46
+scale_amount_max = 5.0
+
+[node name="Ship" type="Sprite2D" parent="Background"]
+position = Vector2(195.369, -30.8004)
+scale = Vector2(0.22482, 0.22482)
+texture = ExtResource("1_e23eh")
+script = ExtResource("3_7uibv")
+
+[node name="Shipmap" type="Sprite2D" parent="."]
+position = Vector2(114, 34)
+texture = ExtResource("1_7wink")
+
+[node name="Door1" type="Sprite2D" parent="Shipmap"]
+position = Vector2(-224, -32)
+rotation = 1.5708
+texture = ExtResource("2_14oow")
+
+[node name="Door2" type="Sprite2D" parent="Shipmap"]
+position = Vector2(-224, -32)
+rotation = 1.5708
+texture = ExtResource("2_14oow")
+
+[node name="Door3" type="Sprite2D" parent="Shipmap"]
+position = Vector2(-224, -32)
+rotation = 1.5708
+texture = ExtResource("2_14oow")
+
+[node name="Door4" type="Sprite2D" parent="Shipmap"]
+position = Vector2(-224, -32)
+rotation = 1.5708
+texture = ExtResource("2_14oow")
+
+[node name="Door5" type="Sprite2D" parent="Shipmap"]
+position = Vector2(-224, -32)
+rotation = 1.5708
+texture = ExtResource("2_14oow")
+
+[node name="Door6" type="Sprite2D" parent="Shipmap"]
+position = Vector2(-224, -32)
+rotation = 1.5708
+texture = ExtResource("2_14oow")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(100, -30)
+zoom = Vector2(0.506, 0.506)
+
+[node name="ShipEngineEmitter" type="CPUParticles2D" parent="."]
+position = Vector2(-784, 14)
+lifetime = 2.0
+emission_shape = 2
+emission_sphere_radius = 126.56
+spread = 84.02
+gravity = Vector2(-1000, 0)
+scale_amount_min = 6.99
+scale_amount_max = 41.96
+
+[node name="Grid Generator" type="Node2D" parent="."]
+position = Vector2(-495, -403)
