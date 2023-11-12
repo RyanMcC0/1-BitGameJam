@@ -17,8 +17,9 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=640
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [editor]
 
@@ -27,5 +28,5 @@ version_control/autoload_on_startup=true
 
 [physics]
 
-common/physics_ticks_per_second=2
-common/max_physics_steps_per_frame=2
+common/physics_ticks_per_second=8
+common/max_physics_steps_per_frame=60
