@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b3lg0jj0wxk70"]
+[gd_scene load_steps=23 format=3 uid="uid://b3lg0jj0wxk70"]
 
 [ext_resource type="Texture2D" uid="uid://c2lmoyig6g78r" path="res://shipmap.svg" id="1_7wink"]
 [ext_resource type="Texture2D" uid="uid://cm3aoi6x83lb8" path="res://ship.svg" id="1_e23eh"]
@@ -10,8 +10,12 @@
 [ext_resource type="Material" uid="uid://debkgi8lijbwn" path="res://NotTransparrent.tres" id="8_0ceiu"]
 [ext_resource type="Texture2D" uid="uid://crv425t07qlvc" path="res://blanksquare.png" id="8_qqlfp"]
 [ext_resource type="Script" path="res://TileControl.gd" id="9_1nqv3"]
+[ext_resource type="Texture2D" uid="uid://lxn7xfn2e5f" path="res://RoomHidden.svg" id="9_lgvti"]
 [ext_resource type="Texture2D" uid="uid://wlesbl4qwa0o" path="res://cursor.svg" id="11_0lvvl"]
 [ext_resource type="Script" path="res://cursor.gd" id="12_wcgjt"]
+[ext_resource type="Texture2D" uid="uid://b5myc8jpisrf1" path="res://Characters/RiotG1.svg" id="14_qw2jd"]
+[ext_resource type="Texture2D" uid="uid://clx05vmd7vqmo" path="res://Characters/RiotG2.svg" id="15_x2hes"]
+[ext_resource type="Texture2D" uid="uid://bmhxigljsa8ov" path="res://Characters/RiotG3.svg" id="16_pam6j"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ap0q6"]
 
@@ -25,10 +29,36 @@ texture = ExtResource("8_qqlfp")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ewgsr"]
+texture = ExtResource("9_lgvti")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_8ky4s"]
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_a2ovj")
 sources/2 = SubResource("TileSetAtlasSource_7op7w")
+sources/4 = SubResource("TileSetAtlasSource_ewgsr")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a1wwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_qw2jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_x2hes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qw2jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pam6j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xlxub")
@@ -153,6 +183,12 @@ spread = 84.02
 gravity = Vector2(-1000, 0)
 scale_amount_min = 6.99
 scale_amount_max = 41.96
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1471, 620)
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_a1wwx")
+frame_progress = 0.879851
 
 [node name="Cursor" type="Sprite2D" parent="."]
 position = Vector2(-6, 1584)
